@@ -1,0 +1,30 @@
+A few large set intersection comparisons in different languages. All done in haste.
+
+
+Results (on my macbook air)
+=======
+
+SCALA
+-----
+
+[info] Loaded set in 112.9
+[info] Loaded set in 7.873
+[info] 9999999 intersects in 9.156
+
+Node.js
+-------
+
+10000000 inserted in 16
+10000000 matched in 8
+
+C / Glib / Hash
+---------------
+
+10000000 inserted. Took 1 seconds.
+9999999 matches. Took 1 seconds.
+
+C / Glib / Tree
+---------------
+
+10000000 inserted. Took 4 seconds.
+9999999 matches. Took 39 seconds.
