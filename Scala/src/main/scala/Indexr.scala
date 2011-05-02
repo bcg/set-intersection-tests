@@ -1,25 +1,30 @@
-//import scala.collection.mutable.Set
 import gnu.trove.set.TIntSet
 import gnu.trove.set.hash.TIntHashSet
 
 
 object Indexr extends Application {
 
-  val one = new TIntHashSet(100000);
-  val two = new TIntHashSet(100000);
+  val n = 10000000
+  val one = new TIntHashSet(n)
+  val two = new TIntHashSet(n)
+  var i = 0
 
   var t = System.currentTimeMillis
 
-  for (i <- 0.until(99999)) {
+  i = 0
+  while(i <= n) {
     one.add(i)
+    i += 1
   }
 
   Console.println("Loaded set in " + ((System.currentTimeMillis-t)/ 1000.0))
 
   t = System.currentTimeMillis
 
-  for (i <- 0.until(99999)) {
+  i = 0
+  while(i <= n) {
     two.add(i)
+    i += 1
   }
 
   Console.println("Loaded set in " + ((System.currentTimeMillis-t)/ 1000.0))
